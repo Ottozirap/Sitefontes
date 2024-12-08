@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Fontes</title>
+    <style>
+         
+         body {
+        background-color: #d11313; /* Substitua pelo código da cor desejada */
+        font-family: Arial, sans-serif;
+    }
+       .imagem-direita {
+        position: absolute;
+        top: 0px;
+        right: 2px;
+        width: 145px;
+        height: auto;
+       }
+        @font-face {
+            font-family: 'Century';
+            src: url(../Documents/fonts/SelectricCentury-Medium9Clean.ttf);
+        }
+        @font-face {
+            font-family: 'Simplifica';
+            src: url(../Documents/fonts/SIMPLIFICA\ Typeface.ttf);
+        }
+        @font-face {
+            font-family: 'Autography';
+            src: url(../Documents/fonts/Autography.otf);
+        }
+        @font-face {
+            font-family: 'Edwardian Script';
+            src: url(../Documents/fonts/edwardianscriptitc.ttf);
+        }
+        @font-face {
+            font-family: 'Roman';
+            src: url(../Documents/fonts/roman.ttf);
+        }
+        @font-face {
+            font-family: 'Martina';
+            src: url(../Documents/fonts/martina-1.ttf);
+        }
+        @font-face {
+            font-family: 'Bakerie Rough';
+            src: url(../Documents/fonts/BakerieRough-Black.eot);
+        }
+        @font-face {
+            font-family: 'waltograph42';
+            src: url(../Documents/fonts/waltograph42.otf);
+        }
+        @font-face {
+            font-family: 'ice kingdom';
+            src: url(../Documents/fonts/Icekingdom.ttf);
+        }
+        @font-face {
+            font-family: 'Hugheid';
+            src: url(../Documents/fonts/Hugheid.otf);
+        }
+        @font-face {
+            font-family: 'Nimbus Roman Becker';
+            src: url(../Documents/fonts/nimbus-roman-becker-dextbol.ttf);
+        }
+        @font-face {
+            font-family: 'Joseph Sophia';
+            src: url(../Documents/fonts/josephsophia.ttf);
+        }
+        @font-face {
+            font-family: 'Lavanderia Regula';
+            src: url(../Documents/fonts/lavanderia-regular.otf);
+        }
+        @font-face {
+            font-family: 'Britannic Bold';
+            src: url(../Documents/fonts/britannic-bold.ttf);
+        }
+        @font-face {
+            font-family: 'Monotype Corsiva';
+            src: url(../Documents/fonts/monotype-corsiva.ttf);
+        }
+        @font-face {
+            font-family: 'Great Vibes';
+            src: url(../Documents/fonts/GreatVibes-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'News701 BT';
+            src: url(../Documents/fonts/news-701-bt.ttf);
+        }
+        @font-face {
+            font-family: 'Fiolex Girls';
+            src: url(../Documents/fonts/Filxgirl.TTF);
+        }
+        @font-face {
+            font-family: 'Wantedo';
+            src: url(../Documents/fonts/Wantedo.ttf);
+        }
+        @font-face {
+            font-family: 'Playlist';
+            src: url(../Documents/fonts/Playlist\ Script.otf);
+        }
+        @font-face {
+            font-family: 'The Giant and the Mouse';
+            src: url(../Documents/fonts/The\ Giant\ and\ the\ Mouse.ttf);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .font-preview {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .font-name {
+            font-size: 1.1em;
+            color: #555;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+  
+<body>
+
+    <img src="./ak-laser.png" alt="logo " class="imagem-direita">
+    
+    <h1>Teste de Fontes</h1>
+    <p>Digite o nome para visualizar em diferentes fontes:</p>
+
+    <input type="text" id="nameInput" placeholder="Digite seu nome" oninput="updatePreview()">
+
+    <div id="fontContainer">
+        <div class="font-preview" style="font-family: 'Century';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Century</span>
+            <span class="font-name">Century</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Simplifica';font-size: 35px;background-color: white;">
+            <span class="font-text">Fonte Simplifica</span>
+            <span class="font-name">Simplifica</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Autography';font-size: 35px;background-color: white;">
+            <span class="font-text">Fonte Autography</span>
+            <span class="font-name">Autography</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Edwardian Script';font-size: 35px;background-color: white;">
+            <span class="font-text">Fonte Edwardian Script</span>
+            <span class="font-name">Edwardian Script</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Roman';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Roman</span>
+            <span class="font-name">Roman</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Martina';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Martina</span>
+            <span class="font-name">Martina</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Bakerie Rough';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Bakerie Rough</span>
+            <span class="font-name">Bakerie Rough</span>
+        </div>
+        <div class="font-preview" style="font-family: 'waltograph42';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Waltograph</span>
+            <span class="font-name">Waltograph</span>
+        </div>
+        <div class="font-preview" style="font-family: 'ice kingdom';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Ice Kingdom</span>
+            <span class="font-name">Ice Kingdom</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Hugheid';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Hugheid</span>
+            <span class="font-name">Hugheid</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Nimbus Roman Becker';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Nimbus Roman Becker</span>
+            <span class="font-name">Nimbus Roman Becker</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Joseph Sophia';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Joseph Sophia</span>
+            <span class="font-name">Joseph Sophia</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Lavanderia Regula';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Lavanderia Regula</span>
+            <span class="font-name">Lavanderia Regula</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Britannic Bold';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Britannic Bold</span>
+            <span class="font-name">Britannic Bold</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Monotype Corsiva';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Monotype Corsiva</span>
+            <span class="font-name">Monotype Corsiva</span>
+        </div>
+        <div class="font-preview" style="font-family: 'Great Vibes';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte Great Vibes</span>
+            <span class="font-name">Great Vibes</span>
+            </div> 
+        <div class="font-preview" style="font-family: 'News701 BT';font-size: 30px;background-color: white;">
+                <span class="font-text">Fonte News701 BT</span>
+                <span class="font-name">News701 BT</span>
+                </div> 
+        <div class="font-preview" style="font-family: 'Fiolex Girls';font-size: 30px;background-color: white;">
+                    <span class="font-text">Fonte Fiolex Girls</span>
+                    <span class="font-name">Fiolex Girls</span>
+                    </div> 
+       <div class="font-preview" style="font-family: 'Wantedo';font-size: 30px;background-color: white;">
+                        <span class="font-text">Fonte Wantedos</span>
+                        <span class="font-name">Wantedo</span>
+                        </div> 
+         <div class="font-preview" style="font-family: 'Playlist';font-size: 30px;background-color: white;">
+                            <span class="font-text">Fonte Playlist</span>
+                            <span class="font-name">Playlist</span>
+                            </div> 
+         <div class="font-preview" style="font-family: 'The Giant and the Mouse';font-size: 30px;background-color: white;">
+            <span class="font-text">Fonte The Giant and the Mouse</span>
+            <span class="font-name">The Giant and the Mouse</span>
+            </div>   
+        </div>
+
+        <script>
+            function updatePreview() {
+                const name = document.getElementById('nameInput').value;
+                const previews = document.querySelectorAll('.font-preview');
+    
+                previews.forEach(preview => {
+                    const fontText = preview.querySelector('.font-text');
+                    fontText.textContent = name || preview.querySelector('.font-name').textContent;
+                });
+            }
+        </script>
+    </body>
+    </html>
+             
+         
