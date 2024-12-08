@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizador de Fontes</title>
     <style>
-                  h1 {
-      color: white;
+     .container {
+  position: relative; 
+}
+
+.imagem-direita {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100px;
+        height: auto;
+        z-index: 1;
+       }
+             h1 { position: relative;
+                 z-index: 0; 
+                 margin: 0; 
+                 color: white;
     }
     p{
         color: white;
@@ -15,13 +29,7 @@
         background-color: #d11313; 
         font-family: Arial, sans-serif;
     }
-       .imagem-direita {
-        position: absolute;
-        top: 0px;
-        right: 2px;
-        width: 100px;
-        height: auto;
-       }
+      
         @font-face {
             font-family: 'Century';
             src: url(fonts/SelectricCentury-Medium9Clean.ttf);
@@ -130,9 +138,10 @@
   
 <body>
 
-    <img src="./ak-laser.png" alt="logo " class="imagem-direita">
-    
-      <h1>TABELA DE FONTES AK LASER</h1>
+    <div class="container">
+        <img src="./ak-laser.png" alt="Imagem" class="imagem-direita">
+        <h1>TABELA DE FONTES AK LASER</h1>
+      </div>
     <p>Digite o seu nome e escolha a fonte que mais combine com você!:</p>
 
     <input type="text" id="nameInput" placeholder="Digite seu nome" oninput="updatePreview()">
