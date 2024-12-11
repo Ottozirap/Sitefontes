@@ -29,7 +29,10 @@
         background-color: #d11313; 
         font-family: Arial, sans-serif;
     }
-      
+       @font-face {
+            font-family: 'Adventure';
+            src: url(fonts/AdventureUnlimited-ScriptRg(1).ttf);
+        }
         @font-face {
             font-family: 'Century';
             src: url(fonts/SelectricCentury-Medium9Clean.ttf);
@@ -56,7 +59,7 @@
         }
         @font-face {
             font-family: 'Bakerie Rough';
-            src: url(fonts/BakerieRough-Black.eot);
+            src: url(fonts/bakerie-rough-bold.eot);
         }
         @font-face {
             font-family: 'waltograph42';
@@ -95,8 +98,8 @@
             src: url(fonts/GreatVibes-Regular.ttf);
         }
         @font-face {
-            font-family: 'News701 BT';
-            src: url(fonts/news-701-bt.ttf);
+            font-family: 'News706 BT';
+            src: url(fonts/news-706-italic-bt.ttf);
         }
         @font-face {
             font-family: 'Fiolex Girls';
@@ -151,6 +154,10 @@
     <input type="text" id="nameInput" placeholder="Digite seu nome" oninput="updatePreview()">
 
     <div id="fontContainer">
+         <div class="font-preview" style="font-family: 'Adventure';font-size: 35px;background-color: white;">
+            <span class="font-text">Fonte Adventure Script</span>
+            <span class="font-name">Adventure</span> 
+        </div>
         <div class="font-preview" style="font-family: 'Century';font-size: 30px;background-color: white;">
             <span class="font-text">Fonte Century</span>
             <span class="font-name">Century</span>
@@ -215,9 +222,9 @@
             <span class="font-text">Fonte Great Vibes</span>
             <span class="font-name">Great Vibes</span>
             </div> 
-        <div class="font-preview" style="font-family: 'News701 BT';font-size: 30px;background-color: white;">
-                <span class="font-text">Fonte News701 BT</span>
-                <span class="font-name">News701 BT</span>
+        <div class="font-preview" style="font-family: 'News706 BT';font-size: 30px;background-color: white;">
+                <span class="font-text">Fonte News706 BT</span>
+                <span class="font-name">News706 BT</span>
                 </div> 
         <div class="font-preview" style="font-family: 'Fiolex Girls';font-size: 30px;background-color: white;">
                     <span class="font-text">Fonte Fiolex Girls</span>
